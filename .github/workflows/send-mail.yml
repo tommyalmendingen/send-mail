@@ -1,4 +1,4 @@
-name: Report
+name: Send e-post
 
 on:
   schedule:
