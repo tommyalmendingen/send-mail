@@ -2,14 +2,14 @@ name: Send e-post
 
 on:
   schedule:
-    - cron: "45 11 * * *"
+    - cron: "10 12 * * *"
   workflow_dispatch:
 
 env:
   MAIL_USER: ${{ secrets.MAIL_USER }}
   MAIL_PASSWORD: ${{ secrets.MAIL_PASSWORD }}
-  DAILY_REPORT_FROM: ${{ secrets.DAILY_REPORT_FROM }}
-  DAILY_REPORT_TO: ${{ secrets.DAILY_REPORT_TO }}
+  MAIL_FROM: ${{ secrets.DAILY_REPORT_FROM }}
+  MAIL_TO: ${{ secrets.DAILY_REPORT_TO }}
 
 jobs:
   report:
