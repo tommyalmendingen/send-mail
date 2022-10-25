@@ -2,7 +2,7 @@ name: Send e-post
 
 on:
   schedule:
-    - cron: "10 12 * * *"
+    - cron: '20 12 * * *'
   workflow_dispatch:
 
 env:
