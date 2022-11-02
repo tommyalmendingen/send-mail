@@ -15,7 +15,7 @@ const nodemailer = require('nodemailer');
         }
       });
     
-    const tittel = 'Kvittering for mottatt henvendelse - Saksnummer: ' + process.env.issue_id;
+    const tittel = 'Kvittering for mottatt henvendelse - Saksnummer: ' + ${process.env.issue_id};
     
     await transporter.sendMail( {
         from: process.env.MAIL_FROM,
