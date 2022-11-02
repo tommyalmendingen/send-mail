@@ -14,11 +14,13 @@ const nodemailer = require('nodemailer');
           pass: process.env.MAIL_PASSWORD //APP passord generert av Google
         }
       });
-
-      await transporter.sendMail({
+    
+    const tittel = 'Kvittering for mottatt henvendelse - Saksnummer: ' + process.env.issue_id;
+    
+    await transporter.sendMail( {
         from: process.env.MAIL_FROM,
         to: process.env.MAIL_FROM,
-        subject: 'Kvittering for mottatt henvendelse',
+        subject: tittel,
         text: `
           Kvittering for mottatt henvendelse - Tekst
         `,
