@@ -15,12 +15,10 @@ const nodemailer = require('nodemailer');
         }
       });
     
-    const tittel = 'Kvittering for mottatt henvendelse - Saksnummer: ' + ${process.env.issue_id};
-    
     await transporter.sendMail( {
         from: process.env.MAIL_FROM,
         to: process.env.MAIL_FROM,
-        subject: tittel,
+        subject: 'Kvittering for mottatt hendelse',
         text: `
           Kvittering for mottatt henvendelse - Tekst
         `,
